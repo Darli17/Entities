@@ -1,1 +1,136 @@
+		    local Player = game.Players.LocalPlayer
+	        local Character = Player.Character
+	        local PlayerGui = Player.PlayerGui
+	        local Reaper = game:GetObjects("rbxassetid://86751024587148")[1]
+	        local ColorRed = game:GetObjects("rbxassetid://109493311508410")[1]
+	        local LatestRoom = game.ReplicatedStorage.GameData.LatestRoom.Value
+	
+	        -- Settings
+	
+	        local WaitTime = 5
+	
+	        -- Script
+	
+	        Reaper.Parent = workspace
+	        local Arrive = game:GetObjects("rbxassetid://75331423649923")[1]
+	        Arrive.Parent = Character.HumanoidRootPart
+	        Arrive.PlaybackSpeed = 0.53
+	        Arrive:Play()
+	
+            local Reboundcolor = Instance.new("ColorCorrectionEffect",game.Lighting) game.Debris:AddItem(Reboundcolor,37)
+            Reboundcolor.Name = "Warn"
+            Reboundcolor.TintColor = Color3.fromRGB(255, 1, 5) Reboundcolor.Saturation = 0 Reboundcolor.Contrast = -0.1
+            game.TweenService:Create(Reboundcolor,TweenInfo.new(15),{TintColor = Color3.fromRGB(255, 1, 5),Saturation = 0, Contrast = 0}):Play()
+            local TweenService = game:GetService("TweenService")
+            local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 1, 5)})
 
+            for i,v in pairs(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets.Light_Fixtures:GetDescendants()) do
+	            if v.Name == "LightStand" then
+	                v.LightFixture.PointLight.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.Neon.Attachment.PointLight.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.Neon.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.Neon.CenterAttach.PointLight.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.Neon.CenterAttach.SpotLight.Color = Color3.new(1, 0, 0)
+	            end
+	        end
+	        for i,v in pairs(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants()) do
+	            if v.Name == "Chandelier" then
+	                v.LightFixture.PointLight.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.SpotLight.Color = Color3.new(1, 0, 0)
+	                v.LightFixture.Neon.Color = Color3.new(1, 0, 0)
+	            end
+	        end
+	
+	
+	        wait(5)
+	        Reaper.RushNew.Ambush.Parent = Character.HumanoidRootPart
+	        Character.HumanoidRootPart.Ambush.Volume = 0.1
+	        Character.HumanoidRootPart.Ambush:Play()
+            local ModuleScripts = {
+                MainGame = require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+            }
+    
+	        wait(1)
+    
+	        --=== Varaibles --===
+            local plr = game.Players.LocalPlayer
+            local char = plr.Character
+            local hum = char.Humanoid
+            local humRoot = char.HumanoidRootPart
+
+            --=== Entity Settings ===--
+
+            local Entity = {
+            	Speed = 4,
+            	WaitTime = 6,
+            	Repeats = nil
+            }
+
+            --=== Entity ===--
+            local EntityM = Reaper
+            local LatestRoom = game.ReplicatedStorage.GameData.LatestRoom.Value
+            EntityM.Parent = workspace
+            LatestRoom -= 1
+            EntityM.RushNew.CFrame = workspace.CurrentRooms[LatestRoom].RoomStart.CFrame
+            warn("Entity Arrived!")
+
+            wait(Entity.WaitTime)
+            local tweenInfo = TweenInfo.new(Entity.Speed, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+            LatestRoom += 2
+            local tween = game:GetService("TweenService"):Create(EntityM.RushNew, tweenInfo, {CFrame = workspace.CurrentRooms[LatestRoom].RoomEnd.CFrame})
+            tween:Play()
+    
+    
+            ModuleScripts.MainGame.camShaker:ShakeOnce(13, 13, 2, 5)
+
+	        Reaper.SoundGroup.Ambience_Ripper.Parent = Character.HumanoidRootPart
+	        Character.HumanoidRootPart.Ambience_Ripper.Volume = 10
+	        Character.HumanoidRootPart.Ambience_Ripper:Play()
+    
+	        wait(4)
+    
+            EntityM:Destroy()
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
+            warn("Tween Stopped!")
+	        Character.HumanoidRootPart.Ambush:Destroy()
+	        Character.HumanoidRootPart.Ambience_Ripper:Destroy()
+    
+	        local Details = {
+		        Description = "Don't Leave Too Early....",
+		        Title = "Torn Apart",
+		        Reason =  "Survive Ripper.",
+		        Icon = "http://www.roblox.com/asset/?id=117338032296497"
+	        }   
+	
+	        local LocalPlayer = game.Players.LocalPlayer;
+	        local GUI = LocalPlayer.PlayerGui.MainUI
+	        local TweenService = game:GetService("TweenService");
+	        local AchievementsHolder = GUI.AchievementsHolder.Achievement:Clone();
+	        AchievementsHolder.Size = UDim2.new(0, 0, 0, 0);
+	        AchievementsHolder.Frame.Position = UDim2.new(1.1, 0, 0, 0);
+	        AchievementsHolder.Name = "LiveAchievement";
+	        AchievementsHolder.Visible = true;
+	        AchievementsHolder.Parent = GUI.AchievementsHolder;
+	        AchievementsHolder.Frame.Details.Desc.Text = Details.Description
+	        AchievementsHolder.Frame.Details.Title.Text = Details.Title
+	        AchievementsHolder.Frame.Details.Reason.Text = Details.Reason
+	        AchievementsHolder.Frame.ImageLabel.Image = Details.Icon
+            AchievementsHolder.Frame.ImageLabel.BackgroundTransparency = 1
+	        AchievementsHolder.Sound:Play();
+	        AchievementsHolder:TweenSize(UDim2.new(1, 0, 0.2, 0), "In", "Quad", 0.8, true);
+	        wait(0.8);
+	        AchievementsHolder.Frame:TweenPosition(UDim2.new(0, 0, 0, 0), "Out", "Quad", 0.5, true);
+	        TweenService:Create(AchievementsHolder.Frame.Glow, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+	        	ImageTransparency = 1
+	        }):Play();
+	        wait(8);
+	        AchievementsHolder.Frame:TweenPosition(UDim2.new(1.1, 0, 0, 0), "In", "Quad", 0.5, true);
+	        wait(0.5);
+	        AchievementsHolder:TweenSize(UDim2.new(1, 0, -0.1, 0), "InOut", "Quad", 0.5, true);
+	        wait(0.5);
+	        AchievementsHolder:Destroy();
