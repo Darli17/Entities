@@ -61,7 +61,7 @@
             --=== Entity Settings ===--
 
             local Entity = {
-            	Speed = 4,
+            	Speed = 3.700,
             	WaitTime = 6,
             	Repeats = nil
             }
@@ -79,6 +79,7 @@
             LatestRoom += 2
             local tween = game:GetService("TweenService"):Create(EntityM.RushNew, tweenInfo, {CFrame = workspace.CurrentRooms[LatestRoom].RoomEnd.CFrame})
             tween:Play()
+            EntityM.SoundGroup["Door Murder2"].Volume = 0
     
     
             ModuleScripts.MainGame.camShaker:ShakeOnce(13, 13, 2, 5)
@@ -88,8 +89,7 @@
 	        Character.HumanoidRootPart.Ambience_Ripper:Play()
     
 	        wait(4)
-    
-            EntityM:Destroy()
+
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
@@ -97,10 +97,14 @@
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
             warn("Tween Stopped!")
-	        Character.HumanoidRootPart.Ambush:Destroy()
+            Character.HumanoidRootPart.Ambush:Destroy()
 	        Character.HumanoidRootPart.Ambience_Ripper:Destroy()
-    
-	        local Details = {
+		    EntityM.SoundGroup["Door Murder"]:Play()
+            EntityM.SoundGroup["Door Murder2"].PlaybackSpeed = 0
+            EntityM.RushNew.CFrame = EntityM.RushNew.CFrame+Vector3.new(0, 155555, 0)
+            EntityM:Destroy()
+
+            local Details = {
 		        Description = "Don't Leave Too Early....",
 		        Title = "Torn Apart",
 		        Reason =  "Survive Ripper.",
