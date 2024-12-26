@@ -35,9 +35,10 @@ while true do
 	    TweenCaption:Play()
 	    wait(3)
 	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/DOORS/refs/heads/main/StaminaBar"))()
-
-	    local MonsterMath = math.random(1, 3000)
-	    if MonsterMath == 50 then
+	  while true do
+       		 wait(0.)
+	    local MonsterMath = math.random(1, 1500)
+	    if MonsterMath == 52 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Ripper"))()
 	    end
 	    if MonsterMath == 45 then
@@ -46,14 +47,15 @@ while true do
 	    if MonsterMath == 55 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Frostbite"))()
 	    end
-	    if MonsterMath == 35 then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Shocker"))()
-	    end
-	    if MonsterMath == 42 then
+	    if MonsterMath == 44 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/DearGod"))()
 	    end
-	    if MonsterMath == 52 then
+	    if MonsterMath == 65 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Rebound"))()
 	    end
+	    if MonsterMath == 12 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Shocker"))()
+	    end
+          end
     end
 end
