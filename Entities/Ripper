@@ -80,18 +80,19 @@
             local tween = game:GetService("TweenService"):Create(EntityM.RushNew, tweenInfo, {CFrame = workspace.CurrentRooms[LatestRoom].RoomEnd.CFrame})
             tween:Play()
             EntityM.SoundGroup["Door Murder2"].Volume = 0
+    
+    
+            ModuleScripts.MainGame.camShaker:ShakeOnce(13, 13, 2, 5)
 
 		EntityM.RushNew.Touched:Connect(function()
 			EntityM.RushNew.Jumpscare.Volume = 3
+            EntityM.RushNew.Jumpscare:Play()
 			local GamePlayers = game.ReplicatedStorage.GameStats
 
 			local plr = game.Players.LocalPlayer.Name
 			GamePlayers["Player_" ..plr].Total.DeathCause.Value = "Ripper"
 			game.Players.LocalPlayer.Character.Humanoid:TakeDamage(100)
-		end
-    
-    
-            ModuleScripts.MainGame.camShaker:ShakeOnce(13, 13, 2, 5)
+		end)
 
 	        Reaper.SoundGroup.Ambience_Ripper.Parent = Character.HumanoidRootPart
 	        Character.HumanoidRootPart.Ambience_Ripper.Volume = 10
