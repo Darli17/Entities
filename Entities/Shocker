@@ -45,7 +45,11 @@
             wait(2)
             Shocker["Part"]["HORROR SCREAM 15"]:Play()
             prt:Destroy()
-            char.Humanoid:TakeDamage(35)
+            char.Humanoid:TakeDamage(40)
+		local GamePlayers = game.ReplicatedStorage.GameStats
+
+		local plr = game.Players.LocalPlayer.Name
+		GamePlayers["Player_" ..plr].Total.DeathCause.Value = "Shocker"
             Shocker["Part"].Anchored = false
             prt:Destroy()
             wait(2)
