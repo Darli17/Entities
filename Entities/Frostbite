@@ -75,7 +75,11 @@
 	    wait(1)
 	    Character.Humanoid:TakeDamage(Damage)
 	
-	
+		local GamePlayers = game.ReplicatedStorage.GameStats
+
+		local plr = game.Players.LocalPlayer.Name
+		GamePlayers["Player_" ..plr].Total.DeathCause.Value = "Frostbite"
+
 	    Frostbite.Part.Ambience:Stop()
 	
 	    Frostbite.Part.Attachment.Heylois.Enabled = false
