@@ -56,9 +56,10 @@ while true do
 	    if MonsterMath == 65 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Rebound"))()
 	    end
-	    if MonsterMath == 5 then
+	while true do
+		wait(55)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Entities/Shocker"))()
-	    end
+	end
           end
     end
 end
