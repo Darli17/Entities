@@ -82,7 +82,7 @@ local entity = spawner.Create({
 	},
 	Movement = {
 		Speed = 115,
-		Delay = 6,
+		Delay = 1,
 		Reversed = false
 	},
 	Rebounding = {
@@ -180,9 +180,10 @@ end)
 ]]--
 
 ---====== Run entity ======---
-
 entity:Run()
-            EntityM.SoundGroup["Door Murder2"].Volume = 0
+
+wait(5)
+            workspace.Ripper.SoundGroup["Door Murder2"].Volume = 0
     
     
             ModuleScripts.MainGame.camShaker:ShakeOnce(13, 13, 2, 5)
@@ -201,8 +202,10 @@ entity:Run()
             ModuleScripts.MainGame.camShaker:Shake(ModuleScripts.MainGame.camShaker.Presets.Explosion)
             Character.HumanoidRootPart.Ambush:Destroy()
 		Character.HumanoidRootPart.Ambience_Ripper:Destroy()
-		Reaper.SoundGroup["Door Murder"]:Clone().Parent = Character.HumanoidRootPart
+		workspace.Ripper.SoundGroup["Door Murder"]:Clone().Parent = Character.HumanoidRootPart
 		Character.HumanoidRootPart["Door Murder"]:Play()
+
+        workspace.Ripper.SoundGroup["Door Murder2"].Volume = 0
 
             local Details = {
 		        Description = "Don't Leave Too Early....",
