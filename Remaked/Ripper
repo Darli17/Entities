@@ -107,10 +107,10 @@ local entity = spawner.Create({
 	Death = {
 		Type = "Guiding", -- "Curious"
 		Hints = {
-    "You died to whom you call Ripper.", 
-    "This is a tricky one.", 
-    "You can indicate its presence when the lights turn red.", 
-    " Make sure to hide when this happens!"
+            "You died to whom you call Ripper.", 
+            "This is a tricky one.", 
+            "You can indicate its presence when the lights turn red.", 
+            "Make sure to hide when this happens!",
 },
 		Cause = "Ripper"
 	}
