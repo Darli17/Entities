@@ -1,3 +1,4 @@
+
 		    local Player = game.Players.LocalPlayer
 	        local Character = Player.Character
 	        local PlayerGui = Player.PlayerGui
@@ -104,15 +105,12 @@ local entity = spawner.Create({
 		Break = false
 	},
 	Death = {
-		Type = "Curious", -- "Curious"
+		Type = "Guiding", -- "Curious"
 		Hints = {
-    "Oh... Hello. I'm surprised you found this place...", 
-    "It's pretty tedious just to get here, last time I checked.", 
-    "Anyways, what'd you die to?", 
-    "Oh... the red one. I'm not too sure on what I would call it...", 
-    "Well, it usually attacks around room 13, so...", 
-    "...you could just call it Ripper. I don't know.", 
-    "Anyways, I hope you don't mind trying again. It would be helpful."
+    "You died to whom you call Ripper.", 
+    "This is a tricky one.", 
+    "You can indicate its presence when the lights turn red.", 
+    " Make sure to hide when this happens!"
 },
 		Cause = "Ripper"
 	}
@@ -185,7 +183,7 @@ entity:Run()
 workspace.Ripper.SoundGroup["Door Murder2"].Volume = 0
 workspace.Ripper.SoundGroup.Volume = 0
 
-wait(5)
+wait(3.800)
             workspace.Ripper.SoundGroup["Door Murder2"].Volume = 0
             workspace.Ripper.SoundGroup["Door Murder2"].Volume = 0
             workspace.Ripper.SoundGroup.Volume = 0
