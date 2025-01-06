@@ -29,7 +29,7 @@ local entity = spawner.Create({
 	},
 	Movement = {
 		Speed = 220,
-		Delay = 35,
+		Delay = 1,
 		Reversed = false
 	},
 	Rebounding = {
@@ -40,9 +40,9 @@ local entity = spawner.Create({
 		Delay = 1
 	},
 	Damage = {
-		Enabled = false,
+		Enabled = true,
 		Range = 40,
-		Amount = 125
+		Amount = 250
 	},
 	Crucifixion = {
 		Enabled = true,
@@ -52,7 +52,7 @@ local entity = spawner.Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"You died from...", "And from whom did you die?..", "Well, in theory it appears from the 15th... oh... from the 60th door?", "Well then you and I will call him... hm?!.. 'A-60', but that might not be his real name...", "Well, let's remember this as a bad dream, and what about the clues?... Just D O N ' T G E T I N H I S S I G H T!№"31423№3123", "D O N ' T T E L L A N Y O N E!*"№:!*?№*?!:"0№:?*!"№ I..", "A.."},
+		Hints = {"You died from...", "And from whom did you die?..", "Well, in theory it appears from the 15th... oh... from the 60th door?", "Well then you and I will call him... hm?!.. 'A-60', but that might not be his real name...", "Well, let's remember this as a bad dream, and what about the clues?... Just D O N ' T G E T I N H I S S I G H T!№", "D O N T T E L L A N Y O N E!*№:!*?№*?!:0№:?*!№ I..", "A.."},
 		Cause = ""
 	}
 })
