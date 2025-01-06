@@ -1,3 +1,4 @@
+
 ---====== Load spawner ======---
 
 local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
@@ -120,7 +121,60 @@ end)
 ---====== Run entity ======---
 
 entity:Run()
-Wait(53)
+wait(32)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(0.)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(2)
+firesignal(game.ReplicatedStorage.RemotesFolder.ClutchHeartbeat.OnClientEvent)
+wait(13)
 ---====== Load achievement giver ======---
 local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/fix%20bage.txt"))()
 
@@ -128,6 +182,6 @@ local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.
 achievementGiver({
     Title = "Rebounds and Rebounds",
     Desc = "How many times does this guy come back?!",
-    Reason = "Survive A-60.",
+    Reason = "Survive at Rare Entity Called A-60.",
     Image = "rbxassetid://125217047990746"
 })
