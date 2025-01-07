@@ -20,6 +20,6 @@ while true do
   wait(0.)
   if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
       caption("Endosym Mode has been loaded! Special thanks : ValerikRob444 - name of the mod.", 6)
-      
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/Entities/refs/heads/main/Endosym/Random"))()
   end
 end
