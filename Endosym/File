@@ -12,8 +12,8 @@ local function caption(text, duration)
 	  PlayerGui.MainUI.MainFrame.Caption.TextTransparency = 0
 	  PlayerGui.MainUI.MainFrame.Caption.Visible = true
 
-    wait(duration)
-    TweenCaption:Play()
+   	wait(duration)
+   	  TweenCaption:Play()
 end
 
 while true do
