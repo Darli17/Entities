@@ -1,0 +1,25 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Darli17/DOORS/refs/heads/main/StaminaBar"))()
+
+local function caption(text, duration)
+	  local Player = game.Players.LocalPlayer
+	  local Character = Player.Character
+	  local PlayerGui = Player.PlayerGui
+
+	  local Info = TweenInfo.new(1)
+	  local TweenCaption = game:GetService("TweenService"):Create(PlayerGui.MainUI.MainFrame.Caption,Info,{TextTransparency=1})
+
+	  PlayerGui.MainUI.MainFrame.Caption.Text = text
+	  PlayerGui.MainUI.MainFrame.Caption.TextTransparency = 0
+	  PlayerGui.MainUI.MainFrame.Caption.Visible = true
+
+    wait(duration)
+    TweenCaption:Play()
+end
+
+while true do
+  wait(0.)
+  if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+      caption("Endosym Mode has been loaded! Special thanks : ValerikRob444 - name of the mod.", 6)
+      
+  end
+end
