@@ -6,7 +6,7 @@ local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = spawner.Create({
 	Entity = {
-		Name = "Dear God",
+		Name = "Deer God",
 		Asset = "rbxassetid://77798269324365",
 		HeightOffset = 0
 	},
@@ -57,7 +57,7 @@ local entity = spawner.Create({
             "...", 
             "Im don't KNOW HIM",
 },
-		Cause = "Dear God"
+		Cause = "Deer God"
 	}
 })
 
