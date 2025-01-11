@@ -106,7 +106,7 @@ local entity = spawner.Create({
 	Movement = {
 		Speed = 85,
 		Delay = 1,
-		Reversed = false
+		Reversed = true
 	},
 	Rebounding = {
 		Enabled = false,
@@ -355,7 +355,7 @@ local entity = spawner.Create({
 	Movement = {
 		Speed = 85,
 		Delay = 1,
-		Reversed = false
+		Reversed = true
 	},
 	Rebounding = {
 		Enabled = false,
@@ -536,9 +536,9 @@ end
 print("Laps ended. Done.")
 
             local Details = {
-		        Description = "Why is my sound... a carryover of something strange?",
-		        Title = "Rebounds and Rebounds",
-		        Reason =  "Survive Rebound.",
+		        Description = "Back for me!",
+		        Title = "Out Of Many Rebounds",
+		        Reason =  "Encounter Rebound.",
 		        Icon = "http://www.roblox.com/asset/?id=13856279697"
 	        }   
 	
