@@ -1,0 +1,89 @@
+			local Shocker = game:GetObjects("rbxassetid://104276025302651")[1]
+            local prt = Instance.new("Part")
+            local plr = game.Players.LocalPlayer
+            local char = plr.Character
+            local humRoot = char.HumanoidRootPart
+
+            Shocker.Parent = workspace
+
+            prt.Parent = humRoot
+            prt.Transparency = 1
+            local weld = Instance.new("Weld")
+
+            weld.Parent = prt
+            weld.Part0 = prt
+            weld.Part1 = humRoot
+
+            weld.C1 = CFrame.new(0, 0, -8)
+            Shocker["Part"].CFrame = prt.CFrame
+
+            local arg1 = game.Workspace.CurrentCamera
+
+            local isActive = true
+            local LookVector = arg1.CFrame.LookVector
+            task.delay(0.4, function()
+	            while isActive do
+		            task.wait(0.03333333333333333)
+		            local randint = math.random(0, 1)
+		            if not isMoving then
+			            if 0.4 < (LookVector - arg1.CFrame.LookVector).Magnitude then
+				            print("LOOKED TOO FAR AWAY")
+				            isMoving = true
+			            end
+			            if 0.4 < plr.Character.Humanoid.MoveDirection.Magnitude then
+				            print("KEPT MOVING")
+				            isMoving = true
+			            end
+		            end
+	            end
+            end)
+            wait(1)
+            if isMoving == true then
+	            Shocker:Destroy()
+	            prt:Destroy()
+            local Details = {
+		        Description = "Look at me.",
+		        Title = "Shocking Experience",
+		        Reason =  "Encounter Shocker.",
+		        Icon = "http://www.roblox.com/asset/?id=114741023833269"
+	        }   
+	
+	        local LocalPlayer = game.Players.LocalPlayer;
+	        local GUI = LocalPlayer.PlayerGui.MainUI
+	        local TweenService = game:GetService("TweenService");
+	        local AchievementsHolder = GUI.AchievementsHolder.Achievement:Clone();
+	        AchievementsHolder.Size = UDim2.new(0, 0, 0, 0);
+	        AchievementsHolder.Frame.Position = UDim2.new(1.1, 0, 0, 0);
+	        AchievementsHolder.Name = "LiveAchievement";
+	        AchievementsHolder.Visible = true;
+	        AchievementsHolder.Parent = GUI.AchievementsHolder;
+	        AchievementsHolder.Frame.Details.Desc.Text = Details.Description
+	        AchievementsHolder.Frame.Details.Title.Text = Details.Title
+	        AchievementsHolder.Frame.Details.Reason.Text = Details.Reason
+	        AchievementsHolder.Frame.ImageLabel.Image = Details.Icon
+            AchievementsHolder.Frame.ImageLabel.BackgroundTransparency = 1
+	        AchievementsHolder.Sound:Play();
+	        AchievementsHolder:TweenSize(UDim2.new(1, 0, 0.2, 0), "In", "Quad", 0.8, true);
+	        wait(0.8);
+	        AchievementsHolder.Frame:TweenPosition(UDim2.new(0, 0, 0, 0), "Out", "Quad", 0.5, true);
+	        TweenService:Create(AchievementsHolder.Frame.Glow, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+	        	ImageTransparency = 1
+	        }):Play();
+	        wait(8);
+	        AchievementsHolder.Frame:TweenPosition(UDim2.new(1.1, 0, 0, 0), "In", "Quad", 0.5, true);
+	        wait(0.5);
+	        AchievementsHolder:TweenSize(UDim2.new(1, 0, -0.1, 0), "InOut", "Quad", 0.5, true);
+	        wait(0.5);
+	        AchievementsHolder:Destroy();
+            end
+
+            
+            wait(2)
+            Shocker["Part"]["HORROR SCREAM 15"]:Play()
+            prt:Destroy()
+            char.Humanoid:TakeDamage(0)
+		local GamePlayers = game.ReplicatedStorage.GameStats
+
+		local plr = game.Players.LocalPlayer.Name
+		GamePlayers["Player_" ..plr].Total.DeathCause.Value = "Shocker"
+        Shocker["Part"].Anchored = false
